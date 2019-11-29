@@ -8,12 +8,13 @@
  *     ListNode(int x) { val = x; }
  * }
  */
+
 class Solution {
     public ListNode swapPairs(ListNode head) {
       ListNode dummy=null;
         if(head!=null) 
         {
-          dummy = head.next;
+            dummy = head.next;
         }
       if(head==null || dummy==null)
        {
@@ -21,10 +22,10 @@ class Solution {
        }
       else 
       {
-       ListNode curr = swapPairs(dummy.next);
-       dummy.next=head;
-       head.next=curr;
-       return dummy;
+           ListNode curr = swapPairs(dummy.next);
+           dummy.next=head;
+           head.next=curr;
+           return dummy;
       }
     }
 }
