@@ -1,42 +1,42 @@
 //8. String to Integer (atoi)
 
 class Solution {
-    public int myAtoi(String str)
+    public int myAtoi(String s)
     {
       String str1 = "";
       boolean vBol = false;
-      if(str.length()==0)
+      if(s.length()==0)
       {
         return 0;
       }
       int i=0;
-      while(str.charAt(i)==' ')
+      while(s.charAt(i)==' ')
       {
           i++;
-            if(i==str.length())
+            if(i==s.length())
             {
               return 0;
             }
       }
-      int x = str.charAt(i);
+      int x = s.charAt(i);
       if(x>=48 && x<=57 || x==45 || x==43)
       {
-        if(x==43 && i!=str.length()-1) {
+        if(x==43 && i!=s.length()-1) {
         i++;
-        x = str.charAt(i);
+        x = s.charAt(i);
       }
-      else if(x==45 && i!=str.length()-1)
+      else if(x==45 && i!=s.length()-1)
       {
           vBol = true;
           i++;
-          x = str.charAt(i);
+          x = s.charAt(i);
       }
         while(x>=48 && x<=57)
         {
-          str1 = str1 + str.charAt(i);
+          str1 = str1 + s.charAt(i);
           i++;
-          if(i==str.length()) break;
-          x = str.charAt(i);
+          if(i==s.length()) break;
+          x = s.charAt(i);
         }
       }
       if(str1=="") {
